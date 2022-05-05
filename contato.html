@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Barbearia GH</title>
+    <link rel="stylesheet" href="myReset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style-home.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="caixaCabecalho">
+            <figure>
+                <a href="index.html">
+                    <img src="img/logo2.png" alt="Barbearia GH"> 
+                </a>
+                <figcaption>Barbearia GH</figcaption>
+            </figure>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Menu</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" >
+        <form>
+            <!--textarea(iformaçao grande) No lugar do "input", + cols=largura / rows=altura / wrap= Quebra de linha-->
+            <!--Placeholder=Mensagem na caixa / required=Campo obrigatorio / maxlenght=Nº max de letras / pattern=Padrão-->
+            <!--autocomplete / autofocus=Abre o site c/ o campo selecionado  / disabled / readonly=Apenas leitura-->
+            <!--size=Largura / type=Tipo (text,password)/ value=Informação definida por mim / p ser mandada ao servidor / max & min ex:senha -->
+
+            <!-- <fieldset> -->
+                <label for="nomeCompleto">Nome Completo</label>     <!-- Quando clicar em "Nome Completo" ja vai ir para o campo de escrita/selecao  -->
+                <input type="text" id="nomeCompleto" class="input-padrao" required autocomplete autofocus placeholder="Informe Seu Nome Completo">               <!--Para o FOR funcionar, precisa existir o ID-->
+
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-padrao" required autocomplete placeholder="seuemail@dominio.com">
+                
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="input-padrao" required autocomplete placeholder="(XX) XXXXX XXXX">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" cols="48" rows="5" required autocomplete maxlength="255" placeholder="Digite Sua Mensagem"></textarea>
+            <!-- </fieldset> -->
+            <fieldset>
+                <legend>Como Prefere o Nosso Contato?</legend>
+
+                <label for="radioEmail"><input type="radio" name=contato 
+                    value="email" id="radioEmail">  Email</label>       <!-- Nessa formatação Input fica antes do texto do Label-->
+                    <!--Name == diz que todos fazem parte do mesmo grupo-->
+                    <!-- e faz com que só possa selecionar UMA marcação-->
+
+                <label for="radioTelefone"><input type="radio" name=contato 
+                    value="telefone" id="radioTelefone"> Telefone</label>
+                
+                <label for="radioWhatsApp"><input type="radio" name=contato 
+                    value="whatsapp" id="radioWhatsApp" checked> WhatsApp</label> <!--checked == deixa marcado como sugestão por padrão-->
+            </fieldset>
+               
+            <fieldset>
+                <legend>Qual horario prefere ser atendido?</legend>
+                <select name="" id="">
+                    <option value="">Manhã</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noite</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked> Gostaria de Receber Nossas Novidades Por Email?</label>
+        
+            <input type="submit" value="Enviar Formulário" class="enviar">     <!-- submit == Botão de Enviar-->
+        </form>
+
+        <table> <!--TR = Table Row == Linha-->   <!--Cada linha tem celula (coluna) = TD-->
+
+            <thead> <!--Cabeçalho da Tabela-->  <!--TH = Celula do Head da Tabela-->
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            
+            <tbody> <!--Corpo da Tabela-->
+                <tr>
+                    <td>Segunda</td>    <!--colspan=X, onde X é o número de células que você quer agrupar.-->
+                    <td>8h ~ 20h</td>
+                </tr>
+
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </tbody>
+
+            <!-- <tfoot></tfoot> --> <!--Rodapé da Tabela-->
+        </table>
+    </main>
+
+    <footer>
+        <img src="img/logo3.png" alt="Barbearia GH">
+        <p class="copyright">&#169 Copyright Barbearia GH - 2022</p>
+        <!-- &#169 Sinal do Copyright https://unicode-table.com/pt/-->
+    </footer>
+</body>
+</html>
+
+<!-- CODE BY GHABRIEL MOLINA -->

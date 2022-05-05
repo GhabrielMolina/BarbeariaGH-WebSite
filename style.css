@@ -1,0 +1,388 @@
+body{
+    background-color: white;
+    padding-top: 0%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    header {
+        background-color: #b90000;
+        width: 100%;
+        padding: 10px 0;
+    }
+        /* Caixa que centraliza o cabeçalho conforme a janela da pagina muda */
+        .caixaCabecalho{    
+            position: relative; /*o elemento passa a aceitar as propriedades Top, Bottom, Left e Right. Pode alterar o posicionamento do elemento*/
+            width: 940px;
+            margin: 0 auto;
+        }
+
+            header figure {
+                display:inline-block;
+                width: 100%;
+            }
+                header figure img{
+                    max-width: 20%;
+                    margin-left: 0%;   
+                    border: 6px solid black;
+                    border-radius: 100%;  
+                    display: table-cell;
+                    float: left;
+                }
+
+                header figure figcaption{
+                    display: table-cell;
+                    float: right;
+                    width: 86%;
+
+                    font-size: 22px;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    color: white;
+
+                    border: 2px solid white;
+
+                    border-top-width:0;
+                    border-right-width:0;
+                    padding-left: 10px;
+                    border-radius: 50px;
+                }
+            
+                header nav{
+                    position: absolute; /*Pode posicionar qualquer elemento de acordo com o elemento pai que tenha um position diferente de static*/
+                    top: 90px;
+                    right: 0;
+                }
+
+                    /* header nav ul{} */
+
+                        header nav ul li{
+                            display: inline; 
+                            margin: 0 0 0 15px;
+                        }
+
+                            header nav ul li a{
+                                text-transform: uppercase;
+                                font-size: 20px;
+                                font-weight: bolder;
+                                text-decoration: none;
+                                color: white;
+                            }
+
+                            header nav ul li a:hover{ /* Comportamento que eu quero mapear quando mouse estiver em cima*/
+                                text-decoration: underline;
+                                color: black;
+                            }
+    
+    .container{
+        width: 940px;
+        margin: 0 auto;
+    }
+
+        /* section {} */
+
+            section ul.serviços{
+                width: 940px;
+                margin: 0 auto;
+                padding: 50px 0;
+            }
+
+                section ul.serviços li{
+                    display: inline-block;
+                    text-align: center;
+                    width: 30%;
+                    vertical-align: top;  /*Orientar o conteúdo pela linha de cima*/
+                    margin: 0 1.5%;
+                    padding: 30px 20px;
+                    box-sizing: border-box;     /* Para poder usar % e px no mesmo bloco, ocorre junção dos dois*/
+                    
+                    /* Conjunto da borda */     /*ou border: 2px solid #000000;*/
+                        border-color: #000000;
+                        border-width: 2px;
+                        border-style: solid;
+                        border-radius: 50px;  
+                }
+
+                section ul.serviços li:hover{
+                    border-color: rgb(0, 0, 255);
+                }
+
+                section ul.serviços li:active{ /* Comportamento que eu quero mapear quando clica em cima*/
+                    border-color: rgb(255, 0, 0);
+                }
+
+                    section ul.serviços li h2{
+                        font-size: 25px;
+                        font-weight: bolder;
+                        font-family: 'Courier New', Courier, monospace;
+                    }
+
+                    section ul.serviços li:hover h2{
+                        font-size: 28px;
+                        font-weight: bolder;
+                        font-family: 'Courier New', Courier, monospace;
+                    }
+
+                    /* section ul.serviços li img{} */
+
+                    section ul.serviços li p{
+                        font-size: 18px;
+                    }
+
+                    section ul.serviços li:hover p{
+                        font-size: 21px;
+                    }
+
+                    section ul.serviços li p.serviçoPreço{
+                        font-size: 22px;
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+
+                    section ul.serviços li:hover p.serviçoPreço{
+                        font-size: 25px;
+                        font-weight: bold;
+
+                    }
+    
+                    .container {
+                        position: relative; /*faz a mágina :)*/
+                        min-height: 100%; /* define a altura minima*/
+                    }
+
+    footer {
+        text-align: center;
+        background: url("img/bg.jpg");
+        padding: 10px 0;
+        width: 100%;
+        bottom: 0px;
+        margin-top: 20px;
+
+    }
+        footer img{
+            width: 150px;
+        }
+
+        footer p.copyright {
+            color: white;
+            font-size: 15px;
+            margin: 10px 0 0;
+        }
+        
+
+        /* CONTATOS.HTML */
+
+        form{
+            margin: 40px 0;
+        }
+
+            form label, form legend {
+                display: block;
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+
+            .input-padrao {       /* == form input*/
+                display: block;
+                margin: 0 0 20px;
+                padding: 10px 15px;
+                width: 50%;
+                font-size: 15px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            form textarea{
+                display: block;
+                margin: 0 0 20px;
+                font-size: 15px;
+                font-family: 'Courier New', Courier, monospace;
+                padding-left: 16px;
+                width: 48%;
+            }
+
+            .checkbox{
+                margin: 20px 0;
+            }
+
+            .enviar{
+                margin-left: 35px;
+                width: 40%;
+                padding: 15px 0;
+                background: #2e0099;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                border: none;
+                border-radius: 8px;
+            }
+
+            .enviar:hover{
+                background: red;
+                cursor: pointer;    /*Cursor seja a maozinha*/
+                transition: all 1s ;  /* Transição pra mudar TODOS os elementos (delay) */
+                transform:  scale(1.2); /*scale == Aumentar todos os valores em 20% (width, height , font-size, etc)*/
+                /*rotate(70deg) == Rotacionar todos os elementos em 70 graus(deg)*/
+            }
+        
+        table{
+            margin: 20px 0 40px;
+        }
+
+            table thead{
+                background: #2e0099;
+                color: white;
+                font-weight: bold;
+            }
+
+            table thead th, table tbody td{
+                border: 1px solid red;
+                padding: 8px 15px;
+            }
+
+
+    /* INDEX.HTML */
+
+    .banner{
+        width: 100%;
+    }
+
+    /* main > p {}     Seleciona o PRIMEIRO filho 'p' da 'main' */
+
+    /* img + p {}       Seleciona o PRIMEIRO irmão 'p' logo depois de 'img'*/
+
+    /* img ~ p {}       Seleciona o TODOS irmãos 'p' logo depois de 'img'*/
+
+    /* .conteudoPrincipal p:not(#missao)       Seleciona TODOS 'p' MENOS o 'p id=missão' */
+
+    /* width: calc(40% - (26px * 4);   Propriedade para calcular % com operações */
+
+        section.conteudoPrincipal{
+            padding: 3em 0;
+            background:#FEFEFE; 
+        }
+            section .tituloPrincipal{
+                text-align: center;
+                font-size: 2em;  /*em == duas vezes o tamanho BASE*/
+                margin: 0 0 1em;    /*Espaçamento proporcional ao tamanho da fonte*/
+                clear: left;        /*Limpa a esquerda, para que não fique ao lado do FLOAT*/
+            }
+
+            section.conteudoPrincipal img.utensilios{
+                width: 120px;
+                float: left;        /*Flutua a imagem para que os textos se desdobrem em sua volta*/
+                margin: 0 20px 20px 0;
+            }
+
+            section.conteudoPrincipal p{
+                margin: 0 0 1em;
+            }
+                section.conteudoPrincipal strong{
+                    font-weight: bold;
+                }
+                section.conteudoPrincipal em{
+                    font-style: italic;
+                }
+        
+        section.mapa{
+            padding: 3em 0;
+
+            background: linear-gradient(#FEFEFE, #8a8a8a);
+
+            /* background: linear-gradient(45deg,blue 40%,violet, red, orange);  
+            DEGRADE == 45deg = Graus de Inclinação Dele // blue começa em 40% da Pagina */
+
+            /* background: radial-gradient(blue ,violet, red, orange); DEGRADE EM ESPIRAL */
+        }
+            section.mapa p{
+                margin: 0 0 2em;
+                text-align: center;
+            }
+
+        section.beneficios{
+            padding: 3em 0;
+            background: #8A8A8A ;
+        }
+            section.beneficios div.conteudoBeneficios{
+                width: 640px;
+                margin: 0 auto;
+            }
+                section.beneficios div.conteudoBeneficios ul{
+                    width: 40%;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                    section.beneficios div.conteudoBeneficios ul li{
+                        line-height: 1.5; /*Altura da Linha*/
+                    }
+                    section.beneficios div.conteudoBeneficios ul li:first-child{ /*last-child = Ultimo*/    /*ntg-child(4) = Nº 4 da lista*/    /*ntg-child(2n) = Elementos PARES da lista*/
+                        
+                        /*firt-child= PSEUDOELEMENTOS = vai pegar de todos os irmãos, o 1ºdeles */
+                        
+                        font-weight: bold;
+                    }
+
+                    section.beneficios div.conteudoBeneficios ul li::before{
+                        
+                        /* PSEUDOELEMENTOS == :first-letter / :first-line
+                        ::before{ content:"["; } // ::after{ content:"]"; }  >> Não é selecionavel com o MOUSE*/
+                        
+                        content: "✦";
+                    }
+
+            
+            section.beneficios img.imgBeneficios{
+                width: 60%;
+                opacity: 1;   /*100% de Opacidade*/
+                transition: 400ms;
+
+                box-shadow: 10px 10px 10px black;
+                /*3º10px = blur = solido pra transparente (esfumaçado)*/
+
+                /* box-shadow: 10px 10px 5px 20px #00000, -10px -10px yellow, -20px 20px rgba(255,0,0,0.5); 
+                Varias camadas de Sombra */
+
+                /* box-shadow: inset 0 0 30px #FF0000;     Sombra Interna */
+                /* text-shadow: 2px 2px #FF0000;   Sombra no Texto */
+            }
+
+            section.beneficios img.imgBeneficios:hover {
+                opacity: 0.3; /*30% de opacidade*/
+                /* color: rgba(red, green, blue, alpha)    Alpha == Opacidade */
+            }
+        
+        div.video {
+            width: 560px;
+            margin: 2em auto;
+        }
+
+
+/* ENTREGAR UM ESTILO DIFERENTE PARA TELA DE MAX 480PX */
+
+@media screen and (max-width:768px) {   
+    .caixaCabecalho, .container, section.beneficios div.conteudoBeneficios, div.video{
+        width: auto;
+    }
+    header figure {
+        text-align: center;
+    }
+        header figure img{
+            display: inline-block;
+            float: none;
+        }
+
+        header figure figcaption{
+            display: inline;
+            float: none;
+            padding-right: 10px;
+            border-right-width: 2px;
+            position: relative;
+            bottom: 1em;
+        }
+    header nav{
+        text-align: center;
+        position: static;
+    }
+
+    section.beneficios div.conteudoBeneficios ul li, section.beneficios img.imgBeneficios{
+        width: 100%;
+    }
+}
+    /* CODE BY GHABRIEL MOLINA */
